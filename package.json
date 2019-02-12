@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "npm run serve:ssr",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -13,6 +13,7 @@
     "build:client-and-server-bundles": "ng build --prod && ng run coPatners:server:production",
     "webpack:server": "webpack --config webpack.server.config.js --progress --colors",
     "compile:server": "webpack --config webpack.server.config.js --progress --colors"
+
   },
   "private": true,
   "dependencies": {
@@ -39,9 +40,10 @@
     "@angular/cli": "~7.1.4",
     "@angular/compiler-cli": "~7.1.0",
     "@angular/language-service": "~7.1.0",
-    "@types/node": "~8.9.4",
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
+    "@types/node": "~8.9.4",
+    "bufferutil": "^4.0.1",
     "codelyzer": "~4.5.0",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
@@ -55,6 +57,9 @@
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
     "typescript": "~3.1.6",
-    "webpack-cli": "^3.1.0"
+    "utf-8-validate": "^5.0.2",
+    "webpack-cli": "^3.1.0",
+    "ws": "^6.1.3",
+    "xhr2": "^0.1.4"
   }
 }

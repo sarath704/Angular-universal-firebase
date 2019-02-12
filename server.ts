@@ -1,3 +1,5 @@
+(global as any).WebSocket = require('ws');
+(global as any).XMLHttpRequest = require('xhr2');
 import 'zone.js/dist/zone-node';
 import {enableProdMode} from '@angular/core';
 // Express Engine
@@ -44,6 +46,6 @@ app.get('*', (req, res) => {
 });
 
 // Start up the Node server
-app.listen(PORT, () => {
-  console.log(`Node Express server listening on http://localhost:${PORT}`);
-});
+// app.listen(PORT, () => {
+//   console.log(`Node Express server listening on http://localhost:${PORT}`);
+// });
